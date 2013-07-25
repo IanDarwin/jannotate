@@ -14,7 +14,7 @@ public class Annotation {
 	String api;
 	String name;
 	RetentionPolicy retention;
-	String use;
+	String usage;
 	
 	public int getId() {
 		return id;
@@ -42,10 +42,10 @@ public class Annotation {
 	public void setRetention(RetentionPolicy retention) {
 		this.retention = retention;
 	}
-	public String getUse() {
-		return use;
+	public String getUsage() {
+		return usage;
 	}
-	public void setUse(String use) {
-		this.use = use;
+	public void setUsage(String use) {
+		this.usage = use;
 	}
 }

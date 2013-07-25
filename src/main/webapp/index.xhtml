@@ -1,10 +1,32 @@
-<html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
+    template="layout/template.xhtml">
 
-<h1>Placeholder</h1>
+<!-- $Id: index.xhtml,v 1.7 2013/06/20 15:54:41 ian Exp $ -->
 
-<p>
-This is intended to be a web app for viewing the list of Java
-annotations.
-</p>
+<ui:define name="title">Java Annotations List</ui:define>
 
-</html>
+<ui:define name="body">
+
+        <h1>Ian Darwin: Java Web Annotations List</h1>
+        <p:dataTable var="anno" value="#{annotationBean.annotations}">
+	<p:column>
+		<f:facet name="header">API</f:facet>
+		#{anno.api}
+	</p:column>
+	<p:column>
+		<f:facet name="header">Annotation</f:facet>
+		#{anno.name}
+	</p:column>
+	<p:column>
+		<f:facet name="header">Usage</f:facet>
+		#{anno.usage}
+	</p:column>
+        </p:datatable>
+
+</ui:define>
+
+</ui:composition>
