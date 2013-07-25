@@ -1,14 +1,19 @@
 package jannotate.domain;
 
+import java.lang.annotation.RetentionPolicy;
+
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 
 @Entity
 public class Annotation {
 	@Id
 	int id;
-	String name;
 	String api;
+	String name;
+	RetentionPolicy retention;
 	String use;
 	
 	public int getId() {
@@ -28,6 +33,14 @@ public class Annotation {
 	}
 	public void setApi(String api) {
 		this.api = api;
+	}
+	
+	@Enumerated(EnumType.ORDINAL)
+	public RetentionPolicy getRetention() {
+		return retention;
+	}
+	public void setRetention(RetentionPolicy retention) {
+		this.retention = retention;
 	}
 	public String getUse() {
 		return use;
