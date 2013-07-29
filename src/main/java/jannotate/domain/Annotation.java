@@ -2,12 +2,13 @@ package jannotate.domain;
 
 import java.lang.annotation.RetentionPolicy;
 
+import javax.inject.Named;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
 
-@Entity
+@Entity @Named
 public class Annotation {
 	@Id
 	int id;

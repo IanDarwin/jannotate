@@ -11,8 +11,8 @@
 
 <ui:define name="body">
 
-        <h1>Ian Darwin: Java Web Annotations List</h1>
-        <p:dataTable var="anno" value="#{annotationBean.annotations}">
+    <h1>Ian Darwin: Java Web Annotations List</h1>
+    <p:dataTable var="anno" value="#{annotationBean.annotations}">
 	<p:column>
 		<f:facet name="header">API</f:facet>
 		#{anno.api}
@@ -25,7 +25,7 @@
 		<f:facet name="header">Usage</f:facet>
 		#{anno.usage}
 	</p:column>
-        </p:datatable>
+	</p:dataTable>
 
 </ui:define>
 

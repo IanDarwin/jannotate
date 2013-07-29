@@ -23,8 +23,8 @@
 	<property name="javax.persistence.jtaDataSource" value="jdbc/jannotateDatasource"/>
 	<property name="hibernate.connection.datasource" value="jdbc/jannotateDatasource"/>
 	-->
-	<property name="javax.persistence.jtaDataSource" value="java:jboss/datasources/jannotateDatasource"/>
-	<property name="hibernate.connection.datasource" value="java:jboss/datasources/jannotateDatasource"/>
+	<property name="javax.persistence.jtaDataSource" value="java:jboss/datasources/ExampleDS"/>
+	<property name="hibernate.connection.datasource" value="java:jboss/datasources/ExampleDS"/>
 
 	<property name="eclipselink.logging.level" value="OFF"/>
 	<property name="eclipselink.orm.throw.exceptions" value="true"/>

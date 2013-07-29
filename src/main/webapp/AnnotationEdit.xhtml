@@ -1,0 +1,27 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
+    template="layout/template.xhtml">
+
+<!-- $Id: index.xhtml,v 1.7 2013/06/20 15:54:41 ian Exp $ -->
+
+<ui:define name="title">Java Annotations - Edit</ui:define>
+
+<ui:define name="body">
+
+<h:form id="alter">
+<h:panelGrid border='1' columns='2'>
+Package: <h:inputText value="#{annotation.api}"/>
+
+Name: <h:inputText value="#{annotation.name}"/>
+
+Description: <h:inputText value="#{annotation.description}"/>
+</h:panelGrid>
+<h:commandButton 
+	value="Save"
+	action="#{annotationBean.addEntry}"/>
+</h:form>
+</ui:define>
+</ui:composition>

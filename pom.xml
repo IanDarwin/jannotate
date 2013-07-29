@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.darwinsys</groupId>
-	<artifactId>jannotate-site</artifactId>
+	<artifactId>jannotate</artifactId>
 	<version>1.0.0</version>
 	<packaging>war</packaging>
 	<inceptionYear>2013</inceptionYear>
@@ -81,11 +81,22 @@
 		</dependency>
 
 		<!-- DeltaSpike Data makes JPA much more usable -->
-		<!-- <dependency> <groupId>org.apache.deltaspike.modules</groupId> <artifactId>data-module-project-api</artifactId> 
-			<version>${deltaspike.version}</version> <scope>compile</scope> </dependency> 
-			<dependency> <groupId>org.apache.deltaspike.modules</groupId> <artifactId>data-module-project-impl</artifactId> 
-			<version>${deltaspike.version}</version> <scope>runtime</scope> </dependency> -->
+		<!--
+		<dependency>
+			<groupId>org.apache.deltaspike.modules</groupId> 
+			<artifactId>data-module-project-api</artifactId> 
+			<version>${deltaspike.version}</version>
+			<scope>compile</scope>
+		</dependency> 
+		<dependency>
+			<groupId>org.apache.deltaspike.modules</groupId>
+			<artifactId>data-module-project-impl</artifactId> 
+			<version>${deltaspike.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		-->
 		<!-- pre-apache, DS Data was known as CDI Query -->
+		<!--
 		<dependency>
 			<groupId>com.ctp.cdi.query</groupId>
 			<artifactId>cdi-query-api</artifactId>
@@ -104,6 +115,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		-->
 
 		<!-- Seemingly a hidden dependency of cdi-query? -->
 		<dependency>
