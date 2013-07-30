@@ -56,4 +56,9 @@ public class Annotation {
 	public void setUsage(String use) {
 		this.usage = use;
 	}
+	
+	@Override
+	public String toString() {
+		return String.format("Annotation Descr(%s, %s)", api, name);
+	}
 }
