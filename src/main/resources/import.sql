@@ -1,83 +1,83 @@
 -- API,Name,Description
--- awk -F, '{print "insert into annotation(id,api,name,usage) values(", --i, "'",$1,"',',$2,"',",$3,"')"
-insert into annotation(id,api,name,usage) values(-1,'Lang', '@Override','Ensure method overrides superclass method');
-CDI,@Named,Marks class as a named CDI bean
-EJB3,@AroundInvoke,Mark POJO class as EJB interceptor
-EJB3,@Asynchronous,Mark bean method for async invocation
-EJB3,@DeclareRoles,List valid roles for bean
-EJB3,@EJB,Request injection of an EJB
-EJB3,@Interceptors,List interceptors to apply from this EJB class or method proxy
-EJB3,@Local,Mark as Local access Bean
-EJB3,@MessageDriven,Mark as a JMS message-driven bean (needs activationConfig)
-EJB3,@PermitAll,Negtive override for @RolesAllowed
-EJB3,@PostActivate,SFSB callback after re-activation
-EJB3,@PrePassivate,SFSB callback prior to passivation
-EJB3,@Remote,Mark as Remote access Bean
-EJB3,@Remove,SFSB method to terminate connection to bean
-EJB3,@RolesAllowed,Roles needed to access bean or method
-EJB3,@Singleton,Mark bean class as Singleton
-EJB3,@Stateful,Mark as Stateful Session Bean
-EJB3,@Stateless,Mark as Stateless Session Bean
-EJB3,@Timeout,Specify method to be invoked when EJB timer goes off
-EJB3,@TransactionAttrribute,Specify transactional strategy for the method
-EJB3,@TransactionManagement,Specify CMT or BMT for the EJB bean class
-EJB3,@WebService,Mark SLSS as SOAP Web Service access Bean
-JPA,@Column,Specify non-default name for column
-JPA,@DiscriminatorColumn,Specify "type field" column in table-per-class-hierarchy
-JPA,@DiscriminatorValue,Define "type field" value for beans of this type in table-per-class
-JPA,@Embeddable,Class is to be used in one (or more) other classes, live in same row
-JPA,@EmbeddedId,Mark the compound primary key property
-JPA,@Embedded,Reference is to an embedded @Embeddable
-JPA,@Entity,Mark class as a JPA entity
-JPA,@GeneratedValue,Defines strategry for generating pkey of newly-persisted object
-JPA,@Id,Mark the primary key property
-JPA,@Inheritance,Specify how to handle inhertance (one of three strategies)
-JPA,@JoinColumn,Specify name of join column
-JPA,@JoinTable,Specify name of join table
-JPA,@ManyToMany,Many of these to Many of those
-JPA,@ManyToOne,many of these to one of those
-JPA,@NamedNativeQuery,Externalize SQL query string, from action class to Entity that it operates on
-JPA,@NamedQueries,Wrapper when more than one @NamedQuery on same entity
-JPA,@NamedQuery,Externalize query string, from action class to Entity that it operates on
-JPA,@OneToMany,One of these to many of those
-JPA,@OneToOne,One of these to one of those
-JPA,@PrimaryKeyJoinColumn,Name of foriegn key column in table-per-sublcass
-JPA,@Table,Specify non-default name for table
-JPA,@Transient,Tell JPA to NOT persist this property
-JSF,@ApplicationScoped,Bean is placed in HTTP ServletContext Scope
-JSF,@ManagedBean,Marks class as a JSF named bean
-JSF,@ManagedProperty,Bean property comes from value attribute (usually will be an EL)
-JSF,@RequestScoped,Bean is placed in HTTP Request Scope
-JSF,@SessionScoped,Bean is placed in HTTP Session Scope
-JSF,@ViewScoped,Bean is kept in HTTP view scope
-JSR-290,@PostConstruct,Invoke after object constructed and DI done
-JSR-290,@PreDestroy,Invoke before object is to be discarded
-JSR-290,@Resource,Request dependency injection
-JSR-303,@Email,Bean validation: must resemble a valid email address
-JSR-303,@Max,Validation: Maximum value
-JSR-303,@Min,Validation: Minimum value
-JSR-303,@NotEmpty,Validation: Must contain at least one character
-JSR-303,@NotNull,Validation: Reference variable may not be null
-JSR-303,@Pattern,Validation: REGEX to match against
-JSR-303,@Size,Validation: Minimum and/or maximum string length
-SpringAOP,@After,Invoke advice after method returns normally or abnormally
-SpringAOP,@AfterReturning,Invoke advice after method returns normally
-SpringAOP,@AfterThrowing,Access thrown exception
-SpringAOP,@Aspect,Defines advice class
-SpringAOP,@Before,Execute this advice before calling target method
-Spring,@Around,Mark @Aspect method as Around (uses ProceedingJoinPoint argument)
-Spring,@Bean,Nominate method as a factory for the given Bean
-Spring,@Component,Marks class as a named Spring Bean
-Spring,@Configuration,Marks class as holding @Bean-annotation factory methods
-Spring,@Lazy,Constrols lazy construction of Singleton bean
-SpringMVC,@Controller,Mark class as MVC Constroller
-SpringMVC,@ModelAttribute,Mark handler method to associate with attribute name
-SpringMVC,@PathVariable,URL Template variable is bound to method parameter
-SpringMVC,@RequestMapping,Define URL for this class or method (may contain template if on method)
-SpringMVC,@RequestMapping,Define URL Template: extract parameters + pass to handler method
-SpringMVC,@ResponseBody,Annotate response object for conversion (e.g., to XML or JSON)
-SpringMVC,@Valid,Request validation of input fields
-Spring,@Repository,Marks class as a DAO-like Spring Bean
-Spring,@Scope,Specify string-valued component scope
-Spring,@Transactional,Specify transactional strategy, optionally handle rollbacks
-Sprint,@Service,Mark as a service class
+insert into annotation(id,api,name,usage) values( -1, 'Lang', '@Override','Ensure method overrides superclass method');
+insert into annotation(id,api,name,usage) values( -2, 'CDI','@Inject','Request resource to be injected')
+insert into annotation(id,api,name,usage) values( -3, 'CDI','@Named','Marks class as a named CDI bean')
+insert into annotation(id,api,name,usage) values( -4, 'EJB3','@AroundInvoke','Mark POJO class as EJB interceptor')
+insert into annotation(id,api,name,usage) values( -5, 'EJB3','@Asynchronous','Mark bean method for async invocation')
+insert into annotation(id,api,name,usage) values( -6, 'EJB3','@DeclareRoles','List valid roles for bean')
+insert into annotation(id,api,name,usage) values( -7, 'EJB3','@EJB','Request injection of an EJB')
+insert into annotation(id,api,name,usage) values( -8, 'EJB3','@Interceptors','List interceptors to apply from this EJB class or method proxy')
+insert into annotation(id,api,name,usage) values( -9, 'EJB3','@Local','Mark as Local access Bean')
+insert into annotation(id,api,name,usage) values( -10, 'EJB3','@MessageDriven','Mark as a JMS message-driven bean (needs activationConfig)')
+insert into annotation(id,api,name,usage) values( -11, 'EJB3','@PermitAll','Negtive override for @RolesAllowed')
+insert into annotation(id,api,name,usage) values( -12, 'EJB3','@PostActivate','SFSB callback after re-activation')
+insert into annotation(id,api,name,usage) values( -13, 'EJB3','@PrePassivate','SFSB callback prior to passivation')
+insert into annotation(id,api,name,usage) values( -14, 'EJB3','@Remote','Mark as Remote access Bean')
+insert into annotation(id,api,name,usage) values( -15, 'EJB3','@Remove','SFSB method to terminate connection to bean')
+insert into annotation(id,api,name,usage) values( -16, 'EJB3','@RolesAllowed','Roles needed to access bean or method')
+insert into annotation(id,api,name,usage) values( -17, 'EJB3','@Singleton','Mark bean class as Singleton')
+insert into annotation(id,api,name,usage) values( -18, 'EJB3','@Stateful','Mark as Stateful Session Bean')
+insert into annotation(id,api,name,usage) values( -19, 'EJB3','@Stateless','Mark as Stateless Session Bean')
+insert into annotation(id,api,name,usage) values( -20, 'EJB3','@Timeout','Specify method to be invoked when EJB timer goes off')
+insert into annotation(id,api,name,usage) values( -21, 'EJB3','@TransactionAttrribute','Specify transactional strategy for the method')
+insert into annotation(id,api,name,usage) values( -22, 'EJB3','@TransactionManagement','Specify CMT or BMT for the EJB bean class')
+insert into annotation(id,api,name,usage) values( -23, 'EJB3','@WebService','Mark SLSS as SOAP Web Service access Bean')
+insert into annotation(id,api,name,usage) values( -24, 'JPA','@Column','Specify non-default name for column')
+insert into annotation(id,api,name,usage) values( -25, 'JPA','@DiscriminatorColumn','Specify "type field" column in table-per-class-hierarchy')
+insert into annotation(id,api,name,usage) values( -26, 'JPA','@DiscriminatorValue','Define "type field" value for beans of this type in table-per-class')
+insert into annotation(id,api,name,usage) values( -27, 'JPA','@Embeddable','Class is to be used in one (or more) other classes')
+insert into annotation(id,api,name,usage) values( -28, 'JPA','@EmbeddedId','Mark the compound primary key property')
+insert into annotation(id,api,name,usage) values( -29, 'JPA','@Embedded','Reference is to an embedded @Embeddable')
+insert into annotation(id,api,name,usage) values( -30, 'JPA','@Entity','Mark class as a JPA entity')
+insert into annotation(id,api,name,usage) values( -31, 'JPA','@GeneratedValue','Defines strategry for generating pkey of newly-persisted object')
+insert into annotation(id,api,name,usage) values( -32, 'JPA','@Id','Mark the primary key property')
+insert into annotation(id,api,name,usage) values( -33, 'JPA','@Inheritance','Specify how to handle inhertance (one of three strategies)')
+insert into annotation(id,api,name,usage) values( -34, 'JPA','@JoinColumn','Specify name of join column')
+insert into annotation(id,api,name,usage) values( -35, 'JPA','@JoinTable','Specify name of join table')
+insert into annotation(id,api,name,usage) values( -36, 'JPA','@ManyToMany','Many of these to Many of those')
+insert into annotation(id,api,name,usage) values( -37, 'JPA','@ManyToOne','many of these to one of those')
+insert into annotation(id,api,name,usage) values( -38, 'JPA','@NamedNativeQuery','Externalize SQL query string')
+insert into annotation(id,api,name,usage) values( -39, 'JPA','@NamedQueries','Wrapper when more than one @NamedQuery on same entity')
+insert into annotation(id,api,name,usage) values( -40, 'JPA','@NamedQuery','Externalize query string')
+insert into annotation(id,api,name,usage) values( -41, 'JPA','@OneToMany','One of these to many of those')
+insert into annotation(id,api,name,usage) values( -42, 'JPA','@OneToOne','One of these to one of those')
+insert into annotation(id,api,name,usage) values( -43, 'JPA','@PrimaryKeyJoinColumn','Name of foriegn key column in table-per-sublcass')
+insert into annotation(id,api,name,usage) values( -44, 'JPA','@Table','Specify non-default name for table')
+insert into annotation(id,api,name,usage) values( -45, 'JPA','@Transient','Tell JPA to NOT persist this property')
+insert into annotation(id,api,name,usage) values( -46, 'JSF','@ApplicationScoped','Bean is placed in HTTP ServletContext Scope')
+insert into annotation(id,api,name,usage) values( -47, 'JSF','@ManagedBean','Marks class as a JSF named bean')
+insert into annotation(id,api,name,usage) values( -48, 'JSF','@ManagedProperty','Bean property comes from value attribute (usually will be an EL)')
+insert into annotation(id,api,name,usage) values( -49, 'JSF','@RequestScoped','Bean is placed in HTTP Request Scope')
+insert into annotation(id,api,name,usage) values( -50, 'JSF','@SessionScoped','Bean is placed in HTTP Session Scope')
+insert into annotation(id,api,name,usage) values( -51, 'JSF','@ViewScoped','Bean is kept in HTTP view scope')
+insert into annotation(id,api,name,usage) values( -52, 'JSR-290','@PostConstruct','Invoke after object constructed and DI done')
+insert into annotation(id,api,name,usage) values( -53, 'JSR-290','@PreDestroy','Invoke before object is to be discarded')
+insert into annotation(id,api,name,usage) values( -54, 'JSR-290','@Resource','Request dependency injection')
+insert into annotation(id,api,name,usage) values( -55, 'JSR-303','@Email','Bean validation: must resemble a valid email address')
+insert into annotation(id,api,name,usage) values( -56, 'JSR-303','@Max','Validation: Maximum value')
+insert into annotation(id,api,name,usage) values( -57, 'JSR-303','@Min','Validation: Minimum value')
+insert into annotation(id,api,name,usage) values( -58, 'JSR-303','@NotEmpty','Validation: Must contain at least one character')
+insert into annotation(id,api,name,usage) values( -59, 'JSR-303','@NotNull','Validation: Reference variable may not be null')
+insert into annotation(id,api,name,usage) values( -60, 'JSR-303','@Pattern','Validation: REGEX to match against')
+insert into annotation(id,api,name,usage) values( -61, 'JSR-303','@Size','Validation: Minimum and/or maximum string length')
+insert into annotation(id,api,name,usage) values( -62, 'SpringAOP','@After','Invoke advice after method returns normally or abnormally')
+insert into annotation(id,api,name,usage) values( -63, 'SpringAOP','@AfterReturning','Invoke advice after method returns normally')
+insert into annotation(id,api,name,usage) values( -64, 'SpringAOP','@AfterThrowing','Access thrown exception')
+insert into annotation(id,api,name,usage) values( -65, 'SpringAOP','@Aspect','Defines advice class')
+insert into annotation(id,api,name,usage) values( -66, 'SpringAOP','@Before','Execute this advice before calling target method')
+insert into annotation(id,api,name,usage) values( -67, 'Spring','@Around','Mark @Aspect method as Around (uses ProceedingJoinPoint argument)')
+insert into annotation(id,api,name,usage) values( -68, 'Spring','@Bean','Nominate method as a factory for the given Bean')
+insert into annotation(id,api,name,usage) values( -69, 'Spring','@Component','Marks class as a named Spring Bean')
+insert into annotation(id,api,name,usage) values( -70, 'Spring','@Configuration','Marks class as holding @Bean-annotation factory methods')
+insert into annotation(id,api,name,usage) values( -71, 'Spring','@Lazy','Constrols lazy construction of Singleton bean')
+insert into annotation(id,api,name,usage) values( -72, 'SpringMVC','@Controller','Mark class as MVC Constroller')
+insert into annotation(id,api,name,usage) values( -73, 'SpringMVC','@ModelAttribute','Mark handler method to associate with attribute name')
+insert into annotation(id,api,name,usage) values( -74, 'SpringMVC','@PathVariable','URL Template variable is bound to method parameter')
+insert into annotation(id,api,name,usage) values( -75, 'SpringMVC','@RequestMapping','Define URL for this class or method (may contain template if on method)')
+insert into annotation(id,api,name,usage) values( -76, 'SpringMVC','@RequestMapping','Define URL Template: extract parameters + pass to handler method')
+insert into annotation(id,api,name,usage) values( -77, 'SpringMVC','@ResponseBody','Annotate response object for conversion (e.g.')
+insert into annotation(id,api,name,usage) values( -78, 'SpringMVC','@Valid','Request validation of input fields')
+insert into annotation(id,api,name,usage) values( -79, 'Spring','@Repository','Marks class as a DAO-like Spring Bean')
+insert into annotation(id,api,name,usage) values( -80, 'Spring','@Scope','Specify string-valued component scope')
+insert into annotation(id,api,name,usage) values( -81, 'Spring','@Transactional','Specify transactional strategy')
+insert into annotation(id,api,name,usage) values( -82, 'Spring','@Service','Mark as a service class')
