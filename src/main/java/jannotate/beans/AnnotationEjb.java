@@ -24,7 +24,7 @@ public class AnnotationEjb {
 	
 	@TransactionAttribute(TransactionAttributeType.REQUIRED)
 	public String addEntry(Annotation instance) {
-		System.out.println("AnnotationEjb.addEntry()");
+		System.out.println("AnnotationEjb.addEntry():" + instance);
 		em.persist(instance);
 		return "index";
 	}
