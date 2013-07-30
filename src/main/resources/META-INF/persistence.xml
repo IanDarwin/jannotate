@@ -19,13 +19,13 @@
 	<!--
     <property name="javax.persistence.transactionType" value="JTA"/>
 	-->
-	<property name="javax.persistence.transactionType" value="RESOURCE_LOCAL"/>
+	<property name="javax.persistence.transactionType" value="JTA"/>
 	<!-- Choose between JBoss and Tomcat JNDI location, and for both EclipseLink (std) and Hibernate (own). -->
 	<!--
 	<property name="javax.persistence.nonJtaDataSource" value="jdbc/jannotateDatasource"/>
 	<property name="hibernate.connection.datasource" value="jdbc/jannotateDatasource"/>
 	-->
-	<property name="javax.persistence.nonJtaDataSource" value="java:jboss/datasources/ExampleDS"/>
+	<property name="javax.persistence.JtaDataSource" value="java:jboss/datasources/ExampleDS"/>
 	<property name="hibernate.connection.datasource" value="java:jboss/datasources/ExampleDS"/>
 
 	<property name="eclipselink.logging.level" value="OFF"/>
