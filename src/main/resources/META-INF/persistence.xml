@@ -16,14 +16,16 @@
 	<property name="eclipselink.target-database"
 	      value="org.eclipse.persistence.platform.database.PostgresqlPlatform"/>
 	
-        <property name="javax.persistence.transactionType" value="JTA"/>
-
+	<!--
+    <property name="javax.persistence.transactionType" value="JTA"/>
+	-->
+	<property name="javax.persistence.transactionType" value="RESOURCE_LOCAL"/>
 	<!-- Choose between JBoss and Tomcat JNDI location, and for both EclipseLink (std) and Hibernate (own). -->
 	<!--
-	<property name="javax.persistence.jtaDataSource" value="jdbc/jannotateDatasource"/>
+	<property name="javax.persistence.nonJtaDataSource" value="jdbc/jannotateDatasource"/>
 	<property name="hibernate.connection.datasource" value="jdbc/jannotateDatasource"/>
 	-->
-	<property name="javax.persistence.jtaDataSource" value="java:jboss/datasources/ExampleDS"/>
+	<property name="javax.persistence.nonJtaDataSource" value="java:jboss/datasources/ExampleDS"/>
 	<property name="hibernate.connection.datasource" value="java:jboss/datasources/ExampleDS"/>
 
 	<property name="eclipselink.logging.level" value="OFF"/>
@@ -36,7 +38,7 @@
 	<!-- Properties for Hibernate -->
 
 	<!-- DO NOT USE CREATE_DROP IN PRODUCTION -->
-	<property name="hibernate.hbm2ddl.auto" value="verify"/>
+	<property name="hibernate.hbm2ddl.auto" value="create-drop"/>
 	<property name="hibernate.show_sql" value="true"/>
 	<property name="hibernate.format_sql" value="false"/>
 	<property name="hibernate.archive.autodetection" value="class"/>
