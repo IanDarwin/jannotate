@@ -17,6 +17,7 @@ public class AnnotationEjb {
 	@PersistenceContext
 	EntityManager em;
 	
+	@TransactionAttribute()
 	public List<Annotation> getAnnotations() {
 		return (List<Annotation>) em.createQuery(
 			"SELECT a FROM Annotation a order by a.api, a.name").getResultList();
