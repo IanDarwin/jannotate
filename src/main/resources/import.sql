@@ -1,4 +1,5 @@
 -- API,Name,Description
+
 insert into annotation(id,api,name,usage) values( -1, 'Lang', '@Override','Ensure method overrides superclass method');
 insert into annotation(id,api,name,usage) values( -2, 'CDI','@Inject','Request resource to be injected')
 insert into annotation(id,api,name,usage) values( -3, 'CDI','@Named','Marks class as a named CDI bean')
