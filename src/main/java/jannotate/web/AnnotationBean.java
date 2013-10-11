@@ -5,13 +5,9 @@ import jannotate.domain.Annotation;
 
 import java.util.List;
 
-import javax.annotation.Resource;
-import javax.faces.bean.*;
-import javax.inject.Named;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Transient;
-import javax.ejb.*;
+import javax.ejb.EJB;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 
 @ManagedBean
 public class AnnotationBean {

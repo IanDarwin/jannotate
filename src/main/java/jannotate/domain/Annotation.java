@@ -1,10 +1,8 @@
 package jannotate.domain;
 
 import java.lang.annotation.RetentionPolicy;
-import javax.validation.constraints.NotNull;
 
 import javax.faces.bean.ManagedBean;
-import javax.inject.Named;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -29,7 +27,7 @@ public class Annotation {
 		this.id = id;
 	}
 	
-	@NotNull
+	//@NotNull
 	public String getName() {
 		return name;
 	}
@@ -59,6 +57,6 @@ public class Annotation {
 	
 	@Override
 	public String toString() {
-		return String.format("Annotation Descr(%s, %s)", api, name);
+		return String.format("Annotation(%s, %s)", api, name);
 	}
 }
